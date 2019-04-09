@@ -6,7 +6,8 @@ C:\Users\irving\Documents\SharpDevelop Projects\GIGACABLE\GIGACABLE\obj\Debug\GI
 C:\Users\irving\Documents\SharpDevelop Projects\GIGACABLE\GIGACABLE\obj\Debug\GIGACABLE.MainForm.resources
 C:\Users\irving\Documents\SharpDevelop Projects\GIGACABLE\GIGACABLE\obj\Debug\GIGACABLE.csproj.GenerateResource.Cache
 C:\Users\irving\Documents\SharpDevelop Projects\GIGACABLE\GIGACABLE\obj\Debug\GIGACABLE.csprojAssemblyReference.cache
-C:\Users\irving\Documents\SharpDevelop Projects\GIGACABLE\GIGACABLE\obj\Debug\GIGACABLE.Form1.resources
 C:\Users\irving\Documents\SharpDevelop Projects\GIGACABLE\GIGACABLE\obj\Debug\GIGACABLE.csproj.CoreCompileInputs.cache
-C:\Users\irving\Documents\SharpDevelop Projects\GIGACABLE\GIGACABLE\obj\Debug\GIGACABLE.Form2.resources
-C:\Users\irving\Documents\SharpDevelop Projects\GIGACABLE\GIGACABLE\obj\Debug\GIGACABLE.Form3.resources
+C:\Users\irving\Documents\SharpDevelop Projects\GIGACABLE\GIGACABLE\obj\Debug\GIGACABLE.usuario.resources
+C:\Users\irving\Documents\SharpDevelop Projects\GIGACABLE\GIGACABLE\obj\Debug\GIGACABLE.busqueda.resources
+C:\Users\irving\Documents\SharpDevelop Projects\GIGACABLE\GIGACABLE\obj\Debug\GIGACABLE.Tecnico.resources
+C:\Users\irving\Documents\SharpDevelop Projects\GIGACABLE\GIGACABLE\obj\Debug\GIGACABLE.detalles.resources

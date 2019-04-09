@@ -18,8 +18,11 @@ namespace GIGACABLE
 	/// </summary>
 	public partial class MainForm : Form
 	{
-		public MainForm()
+ 
+
+        public MainForm()
 		{
+            
 			//
 			// The InitializeComponent() call is required for Windows Forms designer support.
 			//
@@ -29,10 +32,40 @@ namespace GIGACABLE
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
-		void Button1Click(object sender, EventArgs e)
-		{
 
-		}
+      
+        void Button1Click(object sender, EventArgs e)
+		{
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Yes;
+            usuario llamada1 = new usuario();
+            Tecnico llamada3= new Tecnico();
+            
+            
+            
+            
+
+            if (radioButton1.Checked == true)
+            {
+                llamada1.ShowDialog();
+                //llamada1.Show();
+                //_ = llamada1.DialogResult == DialogResult.Yes;
+
+            }
+            else
+            {
+                _ = radioButton2.Checked == true;
+               
+                    llamada3.ShowDialog();
+                    //llamada3.Show();
+                    // _ = llamada3.DialogResult == DialogResult.Yes;
+
+                
+            }
+            /* if (llamada1.DialogResult == DialogResult.Yes)
+             {
+
+             }*/
+        }
 		void Label1Click(object sender, EventArgs e)
 		{
 	
@@ -45,5 +78,15 @@ namespace GIGACABLE
 		{
 	
 		}
-	}
+
+          private void RadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RadioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
