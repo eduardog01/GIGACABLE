@@ -55,6 +55,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reporte.cs" />
+    <Compile Include="TipoDeReporte.cs" />
+    <Compile Include="Usuario.cs" />
     <Compile Include="UsuarioForm.cs">
       <SubType>Form</SubType>
     </Compile>

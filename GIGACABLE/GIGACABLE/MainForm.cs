@@ -20,7 +20,8 @@ namespace GIGACABLE
 	public partial class MainForm : Form
 	{
  
-
+ 		private String conn;
+        private MySqlConnection connect;
         public MainForm()
 		{
             
@@ -33,6 +34,40 @@ namespace GIGACABLE
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
+        public void db_connection()
+        {
+            try
+            {
+                conn = "Server=localhost;Database=gigacable;Uid=admin;Pwd=;";
+                connect = new MySqlConnection(conn);
+                connect.Open();
+            }
+            catch (MySqlException e)
+            {
+                throw;
+            }
+        }
+        private bool validate_login(String user, String pass,String table)
+        {
+            db_connection();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.CommandText = "Select id from "+table+" where usuario=@user and password=@pass";
+            cmd.Parameters.AddWithValue("@user", user);
+            cmd.Parameters.AddWithValue("@pass", pass);
+            cmd.Connection = connect;
+            MySqlDataReader login = cmd.ExecuteReader();
+            if (login.Read())
+            {
+            	//TODO: Guardar id del usuario
+                connect.Close();
+                return true;
+            }
+            else
+            {
+                connect.Close();
+                return false;
+            }
+        }
 
       
         void Button1Click(object sender, EventArgs e)
@@ -47,14 +82,23 @@ namespace GIGACABLE
 
             if (radioButton1.Checked == true)
             {
-                llamada1.ShowDialog();
+            	if(validate_login(textBox1.Text,textBox2.Text,"usuario")){
+            		llamada1.ShowDialog();
+            	}else{
+            		MessageBox.Show ("Usuario o contraseña incorrectos");
+            	}
                 //llamada1.Show();
                 //_ = llamada1.DialogResult == DialogResult.Yes;
 
             }
             else
-            {               
-                    llamada3.ShowDialog();
+            {        
+				if(validate_login(textBox1.Text,textBox2.Text,"tecnico")){
+            		llamada3.ShowDialog();
+            	}else{
+            		MessageBox.Show ("Usuario o contraseña incorrectos");
+            	}            	
+                    
                     //llamada3.Show();
                     // _ = llamada3.DialogResult == DialogResult.Yes;
 
