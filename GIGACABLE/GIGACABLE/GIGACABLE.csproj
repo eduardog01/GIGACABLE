@@ -8,8 +8,9 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>GIGACABLE</RootNamespace>
     <AssemblyName>GIGACABLE</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -34,6 +35,9 @@
     <Reference Include="Microsoft.CSharp">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -51,11 +55,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="usuario.cs">
+    <Compile Include="UsuarioForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="usuario.Designer.cs">
-      <DependentUpon>usuario.cs</DependentUpon>
+    <Compile Include="UsuarioForm.Designer.cs">
+      <DependentUpon>UsuarioForm.cs</DependentUpon>
     </Compile>
     <Compile Include="busqueda.cs">
       <SubType>Form</SubType>
@@ -63,17 +67,17 @@
     <Compile Include="busqueda.Designer.cs">
       <DependentUpon>busqueda.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tecnico.cs">
+    <Compile Include="TecnicoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tecnico.Designer.cs">
-      <DependentUpon>Tecnico.cs</DependentUpon>
+    <Compile Include="TecnicoForm.Designer.cs">
+      <DependentUpon>TecnicoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="detalles.cs">
+    <Compile Include="ReporteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="detalles.Designer.cs">
-      <DependentUpon>detalles.cs</DependentUpon>
+    <Compile Include="ReporteForm.Designer.cs">
+      <DependentUpon>ReporteForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -88,17 +92,17 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="usuario.resx">
-      <DependentUpon>usuario.cs</DependentUpon>
+    <EmbeddedResource Include="UsuarioForm.resx">
+      <DependentUpon>UsuarioForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="busqueda.resx">
       <DependentUpon>busqueda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tecnico.resx">
-      <DependentUpon>Tecnico.cs</DependentUpon>
+    <EmbeddedResource Include="TecnicoForm.resx">
+      <DependentUpon>TecnicoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="detalles.resx">
-      <DependentUpon>detalles.cs</DependentUpon>
+    <EmbeddedResource Include="ReporteForm.resx">
+      <DependentUpon>ReporteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

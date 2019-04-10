@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace GIGACABLE
 {
@@ -52,9 +53,7 @@ namespace GIGACABLE
 
             }
             else
-            {
-                _ = radioButton2.Checked == true;
-               
+            {               
                     llamada3.ShowDialog();
                     //llamada3.Show();
                     // _ = llamada3.DialogResult == DialogResult.Yes;
