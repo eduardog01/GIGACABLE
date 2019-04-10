@@ -22,6 +22,8 @@ namespace GIGACABLE
  
  		private String conn;
         private MySqlConnection connect;
+        usuario llamada1 = new usuario();
+        Tecnico llamada3= new Tecnico();
         public MainForm()
 		{
             
@@ -59,6 +61,8 @@ namespace GIGACABLE
             if (login.Read())
             {
             	//TODO: Guardar id del usuario
+            	llamada1.id = login[0].ToString();
+            	llamada1.setBienvenida(login[0].ToString());
                 connect.Close();
                 return true;
             }
@@ -73,12 +77,6 @@ namespace GIGACABLE
         void Button1Click(object sender, EventArgs e)
 		{
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Yes;
-            usuario llamada1 = new usuario();
-            Tecnico llamada3= new Tecnico();
-            
-            
-            
-            
 
             if (radioButton1.Checked == true)
             {

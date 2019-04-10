@@ -15,16 +15,24 @@ namespace GIGACABLE
 	/// </summary>
 	public class Usuario
 	{
+		String id;
 		String nombre;
 		String usuario;
 		public Usuario()
 		{
+			id = null;
 			nombre=null;
 			usuario=null;
 		}
 		public void setUsuario(String nombre, String usuario){
 			this.nombre = nombre;
 			this.usuario = usuario;
+		}
+		public void setId(String id){
+			this.id = id;
+		}
+		public String getId(){
+			return id;
 		}
 	}
 }
